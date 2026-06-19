@@ -32,10 +32,7 @@ User Card (green gradient)
   └── Preorder Banner (with badge)
   └── 3 Service Icons
 สมัครสินเชื่อ Section
-  └── สินเชื่อค่าเล่าเรียน (featured — NEW)
   └── 3 Loan Product Cards
-Footer (version)
-Bottom Navigation Bar (fixed)
 ```
 
 ---
@@ -46,7 +43,7 @@ Bottom Navigation Bar (fixed)
 | Property | Value |
 |----------|-------|
 | Height | 44px |
-| Background | `#FFFFFF` |
+| Background | `#FFFFFF` (white / transparent) |
 | Left | Time "9:41" — SF Pro Text Semibold 15px |
 | Right | Signal bars + WiFi + Battery SVG icons |
 | Figma node | 247:21025 |
@@ -58,31 +55,36 @@ Bottom Navigation Bar (fixed)
 |----------|-------|
 | Height | ~56px |
 | Background | `#FFFFFF` |
-| Logo | "kbao" — Red italic bold |
-| Subtitle | "ระบบการขอสินเชื่อ" — Body/Body 2 14px Regular grey |
-| Right | Profile avatar 40x40px + edit icon |
+| Logo | `asset/icon/main logo.svg` — ดึงจาก local เท่านั้น |
+| Right | Profile avatar (40×40px circle) + gear icon overlay |
 
 ---
 
 ### 3 — User Card (Green Gradient)
 | Property | Value |
 |----------|-------|
-| Background | Linear gradient `#0B8041` → `#086634` |
-| Border radius | 16px |
-| Padding | 16px |
-| Name | "ฐาปนา ปานประกอบ" — white Heading/Header 3 16px Bold |
-| Role | "ซีเจ สาขาสีลม" — white Body/Body 3 12px |
+| Background | Linear gradient `#0B8041` → `#289F5A` (135deg) |
+| Border radius | 8px |
+| Padding | 12px |
+| Avatar | `asset/image/image area.png` (40×46px) — แสดงตรงๆ ไม่ต้องซ้อนรูป user |
+| Info background | `asset/image/User info.png` (312×78px) — พื้นหลัง section ข้อมูล (full opacity) |
+| Name | ชื่อ-นามสกุล user — white, Heading/Header 3 16px Bold |
+| Branch | รหัสสาขา + ชื่อสาขา เช่น "001 สาขาสีลม" — white, Body/Body 2 13px Regular |
+| Arrow | "›" — rgba(255,255,255,0.7) — ขวาสุด |
 
 ---
 
-### 4 — คู่มือการขาย Card
+### 4 — คู่มือการขาย Card (KM)
 | Property | Value |
 |----------|-------|
 | Background | `#FFFFFF` |
 | Border | 2px solid `#0B8041` |
-| Border radius | 12px |
-| Icon | Book icon green `#0B8041` |
-| CTA | "คลิกที่นี่" — Button/Button 2 14px Bold |
+| Border radius | 8px |
+| Padding | 8px 12px |
+| Icon | `asset/icon/Manual.svg` (32×32px) — line style green |
+| Title | "คู่มือการขาย และวิธีแก้ปัญหา" — Body/Body 1 15px Bold, green |
+| CTA Button | "คลิกที่นี่" — Primary Green, Button/Button 2 14px Bold |
+| Purpose | ช่องทางเข้าถึงคู่มือขาย (KM) |
 
 ---
 
@@ -91,66 +93,59 @@ Bottom Navigation Bar (fixed)
 #### Preorder Banner
 | Property | Value |
 |----------|-------|
-| Background | `#1C7ED6` (color/blue/600) |
-| Border radius | 12px |
-| Badge | Red circle "12" |
-| Text color | `#FFFFFF` |
+| Background | `#1A73E9` |
+| Border radius | 8px |
+| Icon | `asset/icon/Add [Vectorized].svg` (32×32px, white 3D box) |
+| Label | "สินค้าพรีออเดอร์" — white, 16px Bold |
+| CTA Button | "รับสินค้า" — white bg, black text, 14px Bold |
+| Badge | Red circle "12" — overlap บน button ด้านขวาบน |
+| Badge style | position: absolute, top: -8px, right: -8px |
 
-#### Service Icons
-| Icon | Label |
-|------|-------|
-| Bill/receipt | "ดูใบแจ้งหนี้/ชำระบิล" |
-| Phone | "เปลี่ยนเบอร์โทรศัพท์" |
-| Credit/wallet | "ใช้วงเงินสินเชื่อ" |
+#### Service Icons (3 items)
+| Icon (asset) | Label |
+|-------------|-------|
+| `asset/icon/Bill.svg` | "ดูใบแจ้งหนี้ ชำระบิล" |
+| `asset/icon/Phone call.svg` | "เปลี่ยนเบอร์ โทรศัพท์" |
+| `asset/icon/Shopping basket.svg` | "ใช้วงเงิน สินเชื่อ" |
 
-Icon container: ~48x48px rounded | color `#0B8041` | Label Body/Body 3 12px centered
+Icon spec:
+| Property | Value |
+|----------|-------|
+| Icon container | 68×68px, white bg, border-radius 8px, shadow |
+| Icon size | 40×40px (line style, green `#0B8041`) |
+| Layout | flex-start (ชิดซ้าย), gap 8px |
+| Label | Body/Body 3 12px Bold, centered below |
 
 ---
 
 ### 6 — สมัครสินเชื่อ Section
 
-#### สินเชื่อค่าเล่าเรียน (Featured — NEW, full-width)
+#### Section Header
 | Property | Value |
 |----------|-------|
-| Background | Green gradient `#0B8041` → `#289F5A` |
-| Badge | "✦ ใหม่!" white pill |
-| Amount | "200,000 บ." white Number/Number 1 24px Bold |
-| Rate | "0.99%/เดือน" white Body/Body 2 14px |
-| CTA | "สมัครเลย" white bg green text |
+| Title | "สมัครสินเชื่อ" — Heading/Header 2 18px Bold |
+| Text color | `color/grey/900` (`#404040`) |
 
-#### Loan Product Cards (3 items, 2-col grid)
-| Product | Image |
-|---------|-------|
-| สินเชื่อมือถือ | Mobile illustration |
-| สินเชื่อเนื้อ/เกษตร | Meat/agri illustration |
-| สินเชื่อพนักงาน | Employee illustration |
+#### Loan Product Cards (2-col grid — ทุก card เดียวกัน)
+> **กฎ**: card ทุกใบขนาดเท่ากัน `calc(50% - 6px)` แม้แถวมีใบเดียว
+> ถ้ามีสินเชื่อใหม่ → ขอรูปจาก user ก่อน ห้ามสร้างเอง
 
-Card: white bg, 12px radius, 12px padding, shadow `0 2px 8px rgba(0,0,0,0.08)`
+| Product | Image (asset) |
+|---------|--------------|
+| เคบาว ผ่อนได้ (มือถือ และเครื่องใช้ไฟฟ้า) | `asset/image/mobile.png` |
+| เคบาว ผ่อนได้ (สินเชื่อหมุนเวียน) | `asset/image/meat.png` |
+| เคบาว ผ่อนได้ (สินเชื่อพนักงาน) | `asset/image/employee.png` |
 
----
-
-### 7 — Footer
+Card spec:
 | Property | Value |
 |----------|-------|
-| Text | "Version 0.0.000" |
-| Style | Body/Body 3 12px Regular `#A6A6A6` centered |
-
----
-
-### 8 — Bottom Navigation Bar
-| Property | Value |
-|----------|-------|
-| Position | Fixed bottom |
+| Width | `calc(50% - 6px)` — ไม่ stretch |
 | Background | `#FFFFFF` |
-| Border top | 1px solid `#CEE6D9` |
-| Height | ~64px |
-
-| Tab | Icon | State |
-|-----|------|-------|
-| หน้าแรก | Home | Active `#0B8041` |
-| สั่งจอง | Order | Inactive `#A6A6A6` |
-| ประวัติ | History | Inactive |
-| เพิ่มเติม | More | Inactive |
+| Border radius | 8px |
+| Image area | 112px height, object-fit: cover |
+| Product name | Body/Body 2 14px Bold |
+| CTA | "สมัคร" button — Primary Green full-width |
+| Shadow | `0 4px 8px rgba(166,166,166,0.2)` |
 
 ---
 
@@ -158,56 +153,45 @@ Card: white bg, 12px radius, 12px padding, shadow `0 2px 8px rgba(0,0,0,0.08)`
 
 | Element | Token | Hex |
 |---------|-------|-----|
-| Page bg | `alias/color/bg/default` | `#F3F5F8` |
-| User card start | `color/green/600` | `#0B8041` |
-| User card end | `color/green/700` | `#086634` |
-| Preorder banner | `color/blue/600` | `#1C7ED6` |
-| Featured gradient | green/600→green/500 | `#0B8041`→`#289F5A` |
-| Nav active | `color/green/600` | `#0B8041` |
-| Nav inactive | `color/grey/500` | `#A6A6A6` |
-| Version text | `alias/color/text/muted` | `#A6A6A6` |
+| Page background | `alias/color/bg/default` | `#F3F5F8` |
+| App header bg | white | `#FFFFFF` |
+| User card gradient start | `color/green/600` | `#0B8041` |
+| User card gradient end | `color/green/500` | `#289F5A` |
+| คู่มือ border | `color/green/600` | `#0B8041` |
+| Preorder banner | — | `#1A73E9` |
+| Section title | `alias/color/text/default` | `#000000` |
 
 ---
 
 ## [TYPOGRAPHY]
 
-| Element | Figma Style | Size/LH | Weight |
-|---------|-------------|---------|--------|
-| Logo "kbao" | Custom | ~28px | Bold Italic |
-| App subtitle | Body/Body 2 | 14/22px | Regular |
-| User name | Heading/Header 3 | 16/24px | Bold |
-| User role | Body/Body 3 | 12/18px | Regular |
-| Section title | Heading/Header 2 | 18/30px | Bold |
-| Product name | Body/Body 2 | 14/22px | Bold |
-| Featured amount | Number/Number 1 | 24/32px | Bold |
-| Rate | Body/Body 2 | 14/22px | Regular |
-| Nav label | Body/Body 3 | 12/18px | Regular |
+| Element | Figma Style | Size / LH | Weight |
+|---------|-------------|-----------|--------|
+| Logo | Display / custom | 24px | — |
+| App subtitle | `Body/Body 2` | 14/22px | Regular |
+| User name | `Heading/Header 3` | 16/24px | Bold |
+| User branch | `Body/Body 2` | 13/20px | Regular |
+| Section title | `Heading/Header 2` | 18/30px | Bold |
+| Product name (card) | `Body/Body 2` | 14/22px | Bold |
 
 ---
 
-## [ASSETS — Recommended Folder Structure]
+## [ASSETS]
 
-```
-kbmockup/
-└── merchant-app/
-    └── assets/
-        ├── icons/
-        │   ├── bill.svg
-        │   ├── phone-call.svg
-        │   ├── credit-wallet.svg
-        │   ├── home.svg
-        │   ├── order.svg
-        │   ├── history.svg
-        │   ├── more.svg
-        │   ├── book-manual.svg
-        │   └── edit-pen.svg
-        └── images/
-            ├── loan-mobile.png
-            ├── loan-meat.png
-            ├── loan-employee.png
-            ├── loan-education.png
-            └── avatar-placeholder.png
-```
+| Asset | Path | Usage |
+|-------|------|-------|
+| Main logo | `asset/icon/main logo.svg` | App header — local only |
+| User profile | `asset/image/userprofile-cj.png` หรือ `userprofile-cjx.png` | Header avatar เท่านั้น |
+| Avatar frame | `asset/image/image area.png` | User card avatar |
+| User info bg | `asset/image/User info.png` | User card info section |
+| Manual icon | `asset/icon/Manual.svg` | KM card |
+| Bill icon | `asset/icon/Bill.svg` | Service icon |
+| Phone call icon | `asset/icon/Phone call.svg` | Service icon |
+| Shopping basket | `asset/icon/Shopping basket.svg` | Service icon |
+| Preorder icon | `asset/icon/Add [Vectorized].svg` | Preorder banner |
+| Loan mobile | `asset/image/mobile.png` | Loan card |
+| Loan meat | `asset/image/meat.png` | Loan card |
+| Loan employee | `asset/image/employee.png` | Loan card |
 
 ---
 
@@ -215,8 +199,7 @@ kbmockup/
 
 - User card: `aria-label="ข้อมูลพนักงาน: {name}, {role}"`
 - Preorder badge: `aria-label="สั่งจองสินค้า, 12 รายการ"`
-- Bottom nav: `role="navigation"` + `aria-label="เมนูหลัก"`, active `aria-current="page"`
-- Loan cards: `role="button"` + `aria-label="{product name}"`
+- Loan cards: `role="button"` หรือ `<a>` + `aria-label="{product name}"`
 
 ---
 
@@ -224,5 +207,5 @@ kbmockup/
 
 | Section | File | Node |
 |---------|------|------|
-| Home Page | KBao | 2582:79612 |
+| Home Page (full) | KBao | 2582:79612 |
 | Status Bar | KBao | 247:21025 |
