@@ -1,110 +1,162 @@
-# Color Tokens — Merchant App DS
-
-## Primitive Colors
-
-### Green (Brand/Success)
-| Token | Value |
-|-------|-------|
-| `color/green/50` | #F3F9F6 |
-| `color/green/100` | #E4F1E9 |
-| `color/green/200` | #CEE6D9 |
-| `color/green/300` | #A3D6BB |
-| `color/green/400` | #68BA90 |
-| `color/green/500` | #289F5A |
-| `color/green/600` | #0B8041 ← Primary Brand |
-| `color/green/700` | #086634 |
-| `color/green/800` | #064D27 |
-| `color/green/900` | #04331A |
-| `color/green/950` | #021A0D |
-
-### Grey (Neutral)
-| Token | Value |
-|-------|-------|
-| `color/grey/50` | #F9F9F9 |
-| `color/grey/100` | #F2F2F2 |
-| `color/grey/200` | #E6E6E6 |
-| `color/grey/300` | #CECECE |
-| `color/grey/400` | #BDBDBD |
-| `color/grey/500` | #A6A6A6 |
-| `color/grey/600` | #8C8C8C |
-| `color/grey/700` | #737373 |
-| `color/grey/800` | #595959 |
-| `color/grey/900` | #404040 |
-| `color/grey/950` | #262626 |
-
-### Yellow (Warning)
-| Token | Value |
-|-------|-------|
-| `color/yellow/50` | #FFF9EA |
-| `color/yellow/100` | #FFF1C5 |
-| `color/yellow/200` | #FFE28A |
-| `color/yellow/300` | #FFD24F |
-| `color/yellow/400` | #FFC214 |
-| `color/yellow/500` | #FBC02D |
-| `color/yellow/600` | #E0A600 |
-| `color/yellow/700` | #C28000 |
-| `color/yellow/800` | #A36B00 |
-| `color/yellow/900` | #855600 |
-| `color/yellow/950` | #5C3A00 |
-
-### Red (Danger/Error)
-| Token | Value |
-|-------|-------|
-| `color/red/50` | #FFF5F5 |
-| `color/red/100` | #FFE3E3 |
-| `color/red/200` | #FFC9C9 |
-| `color/red/300` | #FFA8A8 |
-| `color/red/400` | #FF8787 |
-| `color/red/500` | #FF6B6B |
-| `color/red/600` | #EA1E30 |
-| `color/red/700` | #C92A2A |
-| `color/red/800` | #A61E1E |
-| `color/red/900` | #8A1515 |
-| `color/red/950` | #600E0E |
-
-### Blue (Info)
-| Token | Value |
-|-------|-------|
-| `color/blue/50` | #EDF2FF |
-| `color/blue/100` | #DBE4FF |
-| `color/blue/200` | #BAC8FF |
-| `color/blue/300` | #91A7FF |
-| `color/blue/400` | #748FFC |
-| `color/blue/500` | #5C7CFA |
-| `color/blue/600` | #1C7ED6 |
-| `color/blue/700` | #1A67A5 |
-| `color/blue/800` | #185A9D |
-| `color/blue/900` | #144880 |
-| `color/blue/950` | #0E3560 |
+# Colors — Merchant App (KBao)
+> Figma node: 4:721 (Style Guide - Colors)
+> Source of truth for all color tokens used in KBao Merchant App UI
 
 ---
 
-## Alias Colors (Semantic)
+## Brand Primary
 
-### Background
-| Token | → Primitive | Description |
-|-------|------------|-------------|
-| `alias/color/bg/default` | color/grey/50 | สีพื้นหลังหลักของแอป |
-| `alias/color/bg/muted` | color/grey/100 | พื้นหลังแบ่งสัดส่วนเนื้อหา |
-| `alias/color/bg/brand` | color/green/600 | พื้นหลัง Primary Brand |
-| `alias/color/bg/brand-subtle` | color/green/50 | พื้นหลังแบรนด์อ่อน / Active state |
+| Token name | Hex | Usage |
+|-----------|-----|-------|
+| Primary Green | `#0B8041` | Main action, CTA buttons, icons, active states |
+| Primary Red | `#EA1E30` | Destructive actions, error states |
 
-### Text
-| Token | → Primitive | Description |
-|-------|------------|-------------|
-| `alias/color/text/default` | color/grey/900 | ตัวอักษรหลัก |
-| `alias/color/text/muted` | color/grey/600 | ตัวอักษรรอง / คำอธิบาย |
+---
 
-### Border
-| Token | → Primitive | Description |
-|-------|------------|-------------|
-| `alias/color/border/default` | color/grey/300 | เส้นขอบทั่วไป |
-| `alias/color/border/brand` | color/green/200 | เส้นขอบ Focus / Brand |
+## Secondary
 
-### Status
-| Token | → Primitive | Description |
-|-------|------------|-------------|
-| `alias/color/status/warning/bg` | color/yellow/50 | พื้นหลัง Warning |
-| `alias/color/status/warning/main` | color/yellow/500 | ไอคอน Warning |
-| `alias/color/status/warning/text` | color/yellow/700 | ข้อความ Warning |
-| `alias/color/status/error/main` | color/red/600 | สถานะ Error / Danger |
+| Token name | Hex | Usage |
+|-----------|-----|-------|
+| Yellow | `#FBC02D` | Warning, highlight accent |
+| Yellow Text | `#C28000` | Text on yellow BG |
+| Yellow BG | `#FFF9EA` | Warning background, banner BG |
+
+---
+
+## Text
+
+| Token name | Hex | Usage |
+|-----------|-----|-------|
+| Text Black | `#000000` | Header, main text, icon |
+| Text Dark Grey | `#6D6D6D` | Description, secondary text |
+| Text Middle Grey | `#A6A6A6` | Placeholder, helper text, disabled text |
+| Text Grey | `#D9D9D9` | Input field placeholder (light) |
+| Text White | `#FFFFFF` | Text on dark background |
+| Primary Green (link) | `#0B8041` | Link text, active label |
+
+---
+
+## Background
+
+| Token name | Hex | Usage |
+|-----------|-----|-------|
+| White BG | `#FFFFFF` | Card, content area, input field |
+| Frame BG | `#F3F5F8` | App frame, status bar, page background |
+| Content BG | `#F8F8F8` | Secondary content background |
+| Green5 | `#F3F9F6` | Light green tint background |
+
+---
+
+## Line / Stroke
+
+| Token name | Hex | Usage |
+|-----------|-----|-------|
+| Stroke Dark Grey | `#6D6D6D` | Strong border |
+| Stroke Grey | `#E6E6E6` | Default card/input border |
+| Stroke White | `#FFFFFF` | Border on dark background |
+| Primary Green | `#0B8041` | Active/selected border (e.g. KM card) |
+| Green20 | `#CEE6D9` | App bar border-bottom, input border |
+
+---
+
+## Disable
+
+| Token name | Hex | Usage |
+|-----------|-----|-------|
+| Disable Text Grey | `#A5A5A5` | Disabled label text |
+| Disable Stroke | `#E6E6E6` | Disabled border |
+| Disable BG | `#F4F4F4` | Disabled button background |
+| Disable Text White | `#FFFFFF` | Disabled text on dark bg |
+
+> Note: Disabled primary button = bg `#F2F2F2`, text `#A6A6A6` (per button.md)
+
+---
+
+## State
+
+| Token name | Hex | Usage |
+|-----------|-----|-------|
+| Success | `#0B8041` | Success state icon/text |
+| Warning | `#FBC02D` | Warning state icon/text |
+| Negative | `#EA1E30` | Error/failure state icon/text |
+
+---
+
+## Icon
+
+| Token name | Hex | Usage |
+|-----------|-----|-------|
+| Icon Black | `#000000` | Default icon color |
+| Icon Green | `#0B8041` | Function/service icon color |
+
+---
+
+## Overlay
+
+| Token name | Value | Usage |
+|-----------|-------|-------|
+| Overlay BG | `rgba(0, 0, 0, 0.35)` | Modal/bottom sheet backdrop |
+
+---
+
+## Gradient
+
+| Token name | From | To | Usage |
+|-----------|------|----|-------|
+| Gradian BG | `#FFFFFF` | `#E5F6ED` | Subtle white-to-green card background |
+| Gradian Green | `#1DD779` | `#01AA1D` | Special green gradient |
+
+> User card gradient on Home page: `#0B8041` → `#289F5A` (linear, left to right)
+
+---
+
+## CSS Variables (Quick Reference)
+
+```css
+:root {
+  /* Brand */
+  --color-primary-green: #0B8041;
+  --color-primary-red: #EA1E30;
+
+  /* Secondary */
+  --color-yellow: #FBC02D;
+  --color-yellow-text: #C28000;
+  --color-yellow-bg: #FFF9EA;
+
+  /* Text */
+  --color-text-black: #000000;
+  --color-text-dark-grey: #6D6D6D;
+  --color-text-mid-grey: #A6A6A6;
+  --color-text-grey: #D9D9D9;
+  --color-text-white: #FFFFFF;
+
+  /* Background */
+  --color-white-bg: #FFFFFF;
+  --color-frame-bg: #F3F5F8;
+  --color-content-bg: #F8F8F8;
+  --color-green5: #F3F9F6;
+
+  /* Stroke */
+  --color-stroke-grey: #E6E6E6;
+  --color-stroke-dark: #6D6D6D;
+  --color-stroke-green: #0B8041;
+  --color-green20: #CEE6D9;
+
+  /* Disable */
+  --color-disable-text: #A5A5A5;
+  --color-disable-bg: #F4F4F4;
+  --color-disable-stroke: #E6E6E6;
+
+  /* State */
+  --color-success: #0B8041;
+  --color-warning: #FBC02D;
+  --color-negative: #EA1E30;
+
+  /* Icon */
+  --color-icon-black: #000000;
+  --color-icon-green: #0B8041;
+
+  /* Overlay */
+  --color-overlay: rgba(0, 0, 0, 0.35);
+}
+```
