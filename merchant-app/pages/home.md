@@ -43,7 +43,7 @@ User Card (green gradient)
 | Property | Value |
 |----------|-------|
 | Height | 44px |
-| Background | `#FFFFFF` (white / transparent) |
+| Background | `#F3F5F8` |
 | Left | Time "9:41" — SF Pro Text Semibold 15px |
 | Right | Signal bars + WiFi + Battery SVG icons |
 | Figma node | 247:21025 |
@@ -53,9 +53,10 @@ User Card (green gradient)
 ### 2 — App Header
 | Property | Value |
 |----------|-------|
-| Height | ~56px |
-| Background | `#FFFFFF` |
+| Height | Hug content (~58px) |
+| Background | `#F3F5F8` (same as page bg, no border) |
 | Logo | `asset/icon/main logo.svg` — ดึงจาก local เท่านั้น |
+| Subtitle | "ระบบการขอสินเชื่อ" — Subtitle 2 (14px Medium), สีดำ `#000000`, gap 8px ใต้ logo, ชิดซ้าย |
 | Right | Profile avatar (40×40px circle) + gear icon overlay |
 
 ---
@@ -67,7 +68,7 @@ User Card (green gradient)
 | Border radius | 8px |
 | Padding | 12px |
 | Avatar | `asset/image/image area.png` (40×46px) — แสดงตรงๆ ไม่ต้องซ้อนรูป user |
-| Info background | `asset/image/User info.png` (312×78px) — พื้นหลัง section ข้อมูล (full opacity) |
+| Info background | สีจาก gradient card เท่านั้น ไม่ต้องใช้รูป |
 | Name | ชื่อ-นามสกุล user — white, Heading/Header 3 16px Bold |
 | Branch | รหัสสาขา + ชื่อสาขา เช่น "001 สาขาสีลม" — white, Body/Body 2 13px Regular |
 | Arrow | "›" — rgba(255,255,255,0.7) — ขวาสุด |
@@ -154,7 +155,8 @@ Card spec:
 | Element | Token | Hex |
 |---------|-------|-----|
 | Page background | `alias/color/bg/default` | `#F3F5F8` |
-| App header bg | white | `#FFFFFF` |
+| App header bg | same as page bg | `#F3F5F8` |
+| Content area bg | white (starts mid-user-card) | `#FFFFFF` |
 | User card gradient start | `color/green/600` | `#0B8041` |
 | User card gradient end | `color/green/500` | `#289F5A` |
 | คู่มือ border | `color/green/600` | `#0B8041` |
@@ -168,7 +170,7 @@ Card spec:
 | Element | Figma Style | Size / LH | Weight |
 |---------|-------------|-----------|--------|
 | Logo | Display / custom | 24px | — |
-| App subtitle | `Body/Body 2` | 14/22px | Regular |
+| App subtitle | `Subtitle 2` | 14/20px | Medium |
 | User name | `Heading/Header 3` | 16/24px | Bold |
 | User branch | `Body/Body 2` | 13/20px | Regular |
 | Section title | `Heading/Header 2` | 18/30px | Bold |
@@ -183,7 +185,6 @@ Card spec:
 | Main logo | `asset/icon/main logo.svg` | App header — local only |
 | User profile | `asset/image/userprofile-cj.png` หรือ `userprofile-cjx.png` | Header avatar เท่านั้น |
 | Avatar frame | `asset/image/image area.png` | User card avatar |
-| User info bg | `asset/image/User info.png` | User card info section |
 | Manual icon | `asset/icon/Manual.svg` | KM card |
 | Bill icon | `asset/icon/Bill.svg` | Service icon |
 | Phone call icon | `asset/icon/Phone call.svg` | Service icon |
